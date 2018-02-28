@@ -30,7 +30,6 @@ class Payment_platron {
             'pg_amount'			=> sprintf("%0.2F", $shop->CartSum()),
             'pg_lifetime'		=> $shop->platron_lifetime*60, // в секундах
 			'pg_testing_mode'	=> $shop->platron_testmode,
-			'pg_user_ip'		=> $_SERVER['REMOTE_ADDR'],
             'pg_description'	=> mb_substr($strDescription, 0, 255, "UTF-8"),
 			'pg_check_url'		=> $_SERVER['HTTP_HOST']."/netcat/modules/netshop/payment/response/platron.php?type=check",
 			'pg_result_url'		=> $_SERVER['HTTP_HOST']."/netcat/modules/netshop/payment/response/platron.php?type=result",
